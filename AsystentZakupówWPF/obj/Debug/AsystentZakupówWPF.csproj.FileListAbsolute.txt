@@ -1,0 +1,2 @@
+C:\Users\T440s\Documents\Visual Studio 2015\Projects\AsystentZakupówWPF\AsystentZakupówWPF\bin\Debug\AsystentZakupówWPF.exe.config
+C:\Users\T440s\Source\Repos\AsystentZakupowWPF\AsystentZakupówWPF\bin\Debug\AsystentZakupówWPF.exe.config
