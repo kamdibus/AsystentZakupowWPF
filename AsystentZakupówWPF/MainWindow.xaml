@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AsystentZakupówWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Asystent Zakupów" Height="350" Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" Grid.Row="0" FontSize="25" Foreground="Navy" Margin="10">
+            Suma:
+            <Run Foreground="Black" FontFamily="Courier New" Text="0"/>
+        </TextBlock>
+        <TextBox x:Name="tbKwota" FontSize="30" FontFamily="Courier New" TextAlignment="Right" Margin="10" Grid.Row="1" Text="0"/>
+        <Button x:Name="btnDodaj" Content="Dodaj" FontSize="20" Margin="10" Grid.Row="2"/>
     </Grid>
 </Window>
