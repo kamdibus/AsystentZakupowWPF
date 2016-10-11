@@ -1,0 +1,2 @@
+# AsystentZakupowWPF
+MVVMApp
