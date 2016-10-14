@@ -4,8 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AsystentZakupówWPF"
+        xmlns:mv="clr-namespace:AsystentZakupówWPF.ModelWidoku"
         mc:Ignorable="d"
         Title="Asystent Zakupów" Height="350" Width="525">
+    <Window.DataContext>
+        <mv:ModelWidoku/>
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -14,9 +18,9 @@
         </Grid.RowDefinitions>
         <TextBlock HorizontalAlignment="Left" Grid.Row="0" FontSize="25" Foreground="Navy" Margin="10">
             Suma:
-            <Run Foreground="Black" FontFamily="Courier New" Text="0"/>
+            <Run Foreground="Black" FontFamily="Courier New" Text="{Binding Suma, Mode=OneWay}"/>
         </TextBlock>
         <TextBox x:Name="tbKwota" FontSize="30" FontFamily="Courier New" TextAlignment="Right" Margin="10" Grid.Row="1" Text="0"/>
-        <Button x:Name="btnDodaj" Content="Dodaj" FontSize="20" Margin="10" Grid.Row="2"/>
+        <Button x:Name="btnDodaj" Content="Dodaj" FontSize="20" Margin="10" Grid.Row="2" Command="{Binding DodajKwotę}" CommandParameter="{Binding ElementName=tbKwota, Path=Text}"/>
     </Grid>
 </Window>

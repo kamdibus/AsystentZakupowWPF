@@ -24,7 +24,7 @@ namespace AsystentZakupówWPF.Model
             Suma += kwota;
         }
 
-        private bool CzyKwotaJestPoprawna(decimal kwota)
+        public bool CzyKwotaJestPoprawna(decimal kwota)
         {
             bool czyDodatnia = kwota > 0;
             bool czyPrzekroczyLimit = Suma + kwota > Limit;
