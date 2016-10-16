@@ -8,8 +8,11 @@
         mc:Ignorable="d"
         Title="Asystent Zakupów" Height="350" Width="525">
     <Window.DataContext>
-        <mv:ModelWidoku/>
+        <mv:ModelWidoku />
     </Window.DataContext>
+    <Window.Resources>
+        <local:BoolToBrushConverter x:Key="boolToBrush"/>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -20,7 +23,7 @@
             Suma:
             <Run Foreground="Black" FontFamily="Courier New" Text="{Binding Suma, Mode=OneWay}"/>
         </TextBlock>
-        <TextBox x:Name="tbKwota" FontSize="30" FontFamily="Courier New" TextAlignment="Right" Margin="10" Grid.Row="1" Text="0"/>
+        <TextBox x:Name="tbKwota" FontSize="30" FontFamily="Courier New" TextAlignment="Right" Margin="10" Grid.Row="1" Text="0" Foreground="{Binding ElementName=btnDodaj, Path=IsEnabled, Mode=OneWay, Converter={StaticResource boolToBrush} }"/>
         <Button x:Name="btnDodaj" Content="Dodaj" FontSize="20" Margin="10" Grid.Row="2" Command="{Binding DodajKwotę}" CommandParameter="{Binding ElementName=tbKwota, Path=Text}"/>
     </Grid>
 </Window>

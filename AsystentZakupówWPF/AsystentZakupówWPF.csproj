@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Konwertery.cs" />
     <Compile Include="ModelWidoku\ModelWidoku.cs" />
     <Compile Include="ModelWidoku\RelayCommand.cs" />
     <Compile Include="Model\SumowanieKwot.cs" />
